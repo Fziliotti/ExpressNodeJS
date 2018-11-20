@@ -3,17 +3,17 @@ let app = express()
 let port = 3000
 
 app.get('/', (req, res) => {
-    res.sendFile('/index.html', {root: __dirname })
+    res.sendFile('pages/index.html', {root: __dirname })
 })
 
 app.get('/contato', (req, res) => {
     // res.sendFile(path.join('/contato.html'));
-    res.sendFile('/contato.html', {root: __dirname })
+    res.sendFile('pages/contato.html', {root: __dirname })
 })
 
 app.post('/contato', (req, res) => {
     // res.send('<h1>Precisamos aprender a pegar os valor que usuário digitou!</h1>')
-    res.sendFile('/contatoResult.html', {root: __dirname })
+    res.sendFile('pages/contatoResult.html', {root: __dirname })
 })
 
 app.listen(port, () => {
